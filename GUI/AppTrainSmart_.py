@@ -76,38 +76,38 @@ class TrainSmart(ctk.CTk):
         # Ventana para registrar el entrenamiento
         ventana_registro_de_entrenamiento = ctk.CTkToplevel(self)
         ventana_registro_de_entrenamiento.title('Registrar entrenamiento')
-        ventana_registro_de_entrenamiento.geometry('300x500')
-        ventana_registro_de_entrenamiento.resizable(0, 0)
+        ventana_registro_de_entrenamiento.geometry('300x500')  # Incrementa el tamaño de la ventana para ajustarse a las imágenes grandes.
 
         ventana_registro_de_entrenamiento.columnconfigure(0, weight=1)
-
         # BOTÓN/IMAGEN 1 - Inicia loguarse
-        # Cargar la imagen con PIL
         imagen_original_1 = Image.open('1.png')
-        imagen_redimensionada_1 = imagen_original_1.resize((600, 310))
+        imagen_redimensionada_1 = imagen_original_1.resize((410, 200))  # Redimensionar a 300x200
         imagen_tk_1 = ImageTk.PhotoImage(imagen_redimensionada_1)
-
-        # Crear un label con la imagen para el primer botón
         boton_registrar_entrenamiento = ctk.CTkLabel(ventana_registro_de_entrenamiento, image=imagen_tk_1, fg_color="transparent", bg_color="transparent", text='')
         boton_registrar_entrenamiento.image = imagen_tk_1
-        boton_registrar_entrenamiento.grid(row=0, column=0, padx=10, pady=(10, 5), sticky="nsew")
-
-        # Vincular la función loguarse al primer botón
+        boton_registrar_entrenamiento.grid(row=0, column=0, padx=20, pady=(5, 10), sticky="n")  # Aumenta el espaciado y centra
         boton_registrar_entrenamiento.bind("<Button-1>", self.loguarse)
 
         # BOTÓN/IMAGEN 2 - Inicia loguarse_2
-        # Cargar la imagen con PIL
         imagen_original_2 = Image.open('2.png')
-        imagen_redimensionada_2 = imagen_original_2.resize((600, 310))
+        imagen_redimensionada_2 = imagen_original_2.resize((410, 200))  # Redimensionar a 300x200
         imagen_tk_2 = ImageTk.PhotoImage(imagen_redimensionada_2)
-
-        # Crear un label con la imagen para el segundo botón
         boton_registrar_entrenamiento_futuro = ctk.CTkLabel(ventana_registro_de_entrenamiento, image=imagen_tk_2, fg_color="transparent", bg_color="transparent", text='')
         boton_registrar_entrenamiento_futuro.image = imagen_tk_2
-        boton_registrar_entrenamiento_futuro.grid(row=1, column=0, padx=40, pady=(5, 10), sticky="nsew")
-
-        # Vincular la función loguarse_2 al segundo botón
+        boton_registrar_entrenamiento_futuro.grid(row=1, column=0, padx=20, pady=(5, 10), sticky="n")  # Aumenta el espaciado
         boton_registrar_entrenamiento_futuro.bind("<Button-1>", self.loguarse_2)
+
+        # BOTÓN/IMAGEN 3 - Inicia loguarse_3
+        imagen_original_3 = Image.open('3.png')
+        imagen_redimensionada_3 = imagen_original_3.resize((410, 200))  # Redimensionar a 300x200
+        imagen_tk_3 = ImageTk.PhotoImage(imagen_redimensionada_3)
+        boton_seguimiento_registrado_anteriormente = ctk.CTkLabel(ventana_registro_de_entrenamiento, image=imagen_tk_3, fg_color='transparent', bg_color='transparent', text='')
+        boton_seguimiento_registrado_anteriormente.image = imagen_tk_3
+        boton_seguimiento_registrado_anteriormente.grid(row=2, column=0, padx=20, pady=(5, 10), sticky="n")  # Ajustar espaciado
+        boton_seguimiento_registrado_anteriormente.bind("<Button-1>", self.mostrar_boton_seguimiento_registrado_anteriormente)
+
+    def mostrar_boton_seguimiento_registrado_anteriormente(self, event=None):
+        print('Funcion loguarse_3 ejecutada')
 
     def loguarse_2(self, event=None):
         # Código para manejar el evento del segundo botón
@@ -146,7 +146,7 @@ class TrainSmart(ctk.CTk):
         usuario_label = ctk.CTkLabel(ventana_registro, text="Usuario")
         usuario_label.grid(row=3, column=0, padx=10, pady=10)
 
-        usuario_entry = ctk.CTkEntry(ventana_registro)
+        usuario_entry = ctk.CTkEntry(ventana_registro) 
         usuario_entry.grid(row=4, column=0, padx=10, pady=10)
 
         contraseña_label = ctk.CTkLabel(ventana_registro, text="Contraseña")
