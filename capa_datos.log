@@ -1,0 +1,16 @@
+12:23:27: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:23:27: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000018F7E1FCC20> 
+12:23:27: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018F7E5659C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000018F7E5659C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018F7E5659C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018F7E565AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000018F7E565AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018F7E565AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018F7E565BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:27: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000018F7E565BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:23:40: DEBUG [Cliente_GYM.py:53] Cliente(id_cliente=1, nombre=Nicolas, usuario=nicodiaz23, contraseña=nico2313) 
+12:23:49: DEBUG [Logger_base.py:16] Mensaje a nivel de debug 
+12:23:49: INFO [Logger_base.py:17] Mensaje a nivel de info 
+12:23:49: WARNING [Logger_base.py:18] Mensaje a nivel de warning 
+12:23:49: ERROR [Logger_base.py:19] Mensaje a nivel de error 
+12:23:49: CRITICAL [Logger_base.py:20] Mensaje a nivel de critical 
