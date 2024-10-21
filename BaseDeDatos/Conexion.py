@@ -2,7 +2,7 @@ from psycopg2 import pool
 from Logger_base import log
 import sys
 
-class Conexion:
+class Conexion_1:
     
     _DATABASE = "AppTrainSmart"
     _USERNAME = "postgres"
@@ -49,11 +49,11 @@ class Conexion:
         cls.obtener_pool().closeall()  # Cerrar todas las conexiones del pool
 
 if __name__ == "__main__":
-    conexion01 = Conexion.obtener_conexion()
-    Conexion.liberar_conexion(conexion01)
-    conexion02 = Conexion.obtener_conexion() 
-    conexion03 = Conexion.obtener_conexion()
-    Conexion.liberar_conexion(conexion03)  
-    conexion04 = Conexion.obtener_conexion() 
-    conexion05 = Conexion.obtener_conexion()
-    Conexion.liberar_conexion(conexion05)
+    conexion01 = Conexion_1.obtener_conexion()
+    Conexion_1.liberar_conexion(conexion01)
+    conexion02 = Conexion_1.obtener_conexion() 
+    conexion03 = Conexion_1.obtener_conexion()
+    Conexion_1.liberar_conexion(conexion03)  
+    conexion04 = Conexion_1.obtener_conexion() 
+    conexion05 = Conexion_1.obtener_conexion() 
+    Conexion_1.liberar_conexion(conexion05)

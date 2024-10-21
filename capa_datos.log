@@ -14,3 +14,106 @@
 12:23:49: WARNING [Logger_base.py:18] Mensaje a nivel de warning 
 12:23:49: ERROR [Logger_base.py:19] Mensaje a nivel de error 
 12:23:49: CRITICAL [Logger_base.py:20] Mensaje a nivel de critical 
+02:36:18: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:37:39: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:37:39: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001D324A4F8C0> 
+02:37:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D324DD59C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001D324DD59C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D324DD59C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D324DD5AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001D324DD5AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D324DD5AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D324DD5BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:39: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001D324DD5BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:53: DEBUG [Logger_base.py:16] Mensaje a nivel de debug 
+02:37:53: INFO [Logger_base.py:17] Mensaje a nivel de info 
+02:37:53: WARNING [Logger_base.py:18] Mensaje a nivel de warning 
+02:37:53: ERROR [Logger_base.py:19] Mensaje a nivel de error 
+02:37:53: CRITICAL [Logger_base.py:20] Mensaje a nivel de critical 
+02:37:58: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:37:59: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000028ECD17F8C0> 
+02:37:59: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000028ECD5059C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000028ECD5059C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000028ECD5059C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000028ECD505AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000028ECD505AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000028ECD505AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000028ECD505BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:37:59: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000028ECD505BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:38:03: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:45:28: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:45:29: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001A5635B2420> 
+02:45:29: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001A5635B59C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001A5635B59C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001A5635B59C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001A5635B5AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001A5635B5AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001A5635B5AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001A5635B5BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:45:29: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001A5635B5BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:06: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:51:06: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:51:06: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000025F441C54C0> 
+02:51:06: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000025F45E01E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:06: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:51:06: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: 'Cliente_1' object has no attribute '_apellido' 
+02:51:06: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000025F45E01E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:30: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:51:30: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:51:30: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001E4A88754C0> 
+02:51:30: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001E4AA451E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:30: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:51:30: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: 'Cliente_1' object has no attribute '_apellido' 
+02:51:30: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001E4AA451E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:53:50: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000018137E52420> 
+02:53:50: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018137E559C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000018137E559C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018137E559C0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018137E55AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000018137E55AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018137E55AD0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000018137E55BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:53:50: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000018137E55BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:54:15: DEBUG [Logger_base.py:16] Mensaje a nivel de debug 
+02:54:15: INFO [Logger_base.py:17] Mensaje a nivel de info 
+02:54:15: WARNING [Logger_base.py:18] Mensaje a nivel de warning 
+02:54:15: ERROR [Logger_base.py:19] Mensaje a nivel de error 
+02:54:15: CRITICAL [Logger_base.py:20] Mensaje a nivel de critical 
+02:55:19: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:55:19: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:55:19: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002A84FD68410> 
+02:55:19: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002A850061E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:55:19: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:55:19: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: 'Cliente_1' object has no attribute 'usuario' 
+02:55:19: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002A850061E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:57:05: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:57:05: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:57:05: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x00000280278F8410> 
+02:57:05: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000028027BF1E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:57:05: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:57:05: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: 'Cliente_1' object has no attribute 'usuario' 
+02:57:05: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000028027BF1E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:58:44: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:58:44: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:58:44: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000027C85A68410> 
+02:58:44: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027C85D51E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:58:44: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:58:44: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: 'Cliente_1' object has no attribute 'usuario' 
+02:58:44: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027C85D51E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:00:58: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+03:00:58: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+03:00:58: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001BE73B6A8A0> 
+03:00:58: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001BE73B71E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:00:58: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+03:00:58: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: 'Cliente_1' object has no attribute '_id_cliente' 
+03:00:58: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001BE73B71E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:03:18: DEBUG [Cliente_GYM.py:51] Id: 1, Nombre: Nicolas, usuario: Diaz, contraseña: 2303 
+03:03:25: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+03:03:25: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+03:03:25: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001F3AB37A8A0> 
+03:03:25: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001F3AB381E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:03:25: DEBUG [ClienteDAO_GYM.py:30] Cliente insertado: Id: 1, Nombre: Nicolas, usuario: nicodiaz23, contraseña: nico2313 
+03:03:25: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+03:03:25: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+03:03:25: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001F3AB381E00; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 

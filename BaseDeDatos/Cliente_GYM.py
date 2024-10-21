@@ -1,20 +1,18 @@
 from Logger_base import log
 
-class Cliente:
-    
-    def __init__(self,id_cliente=None,nombre=None,usuario=None,contraseña=None):
-        self.id_cliente=id_cliente
-        self.nombre=nombre
-        self.usuario=usuario
-        self.contraseña=contraseña
-        
+class Cliente_1:
+
+    def __init__(self, id_cliente=None, nombre=None, usuario=None, contraseña=None):
+        self.id_cliente = id_cliente
+        self.nombre = nombre
+        self.usuario = usuario
+        self.contraseña = contraseña
+
     def __str__(self):
-        return f"Cliente(id_cliente={self.id_cliente}, nombre={self.nombre}, usuario={self.usuario}, contraseña={self.contraseña})"
-    
-    def __repr__(self):
-        return f"Cliente(id_cliente={self.id_cliente}, nombre={self.nombre}, usuario={self.usuario}, contraseña={self.contraseña})"    
-    
-    
+        return (f'Id: {self.id_cliente}, Nombre: {self.nombre}, '
+                f'usuario: {self.usuario}, contraseña: {self.contraseña}')
+
+
     @property
     def id_cliente(self):
         return self._id_cliente
@@ -32,23 +30,22 @@ class Cliente:
         self._nombre = nombre
 
     @property
-    def apellido(self):
-        return self._apellido
+    def usuario(self):
+        return self._usuario
 
-    @apellido.setter
-    def apellido(self, apellido):
-        self._apellido = apellido
+    @usuario.setter
+    def usuario(self, usuario):
+        self._usuario = usuario
 
     @property
-    def membresia(self):
-        return self._membresia
+    def contraseña(self):
+        return self._contraseña
 
-    @membresia.setter
-    def membresia(self, membresia):
-        self._membresia = membresia
+    @contraseña.setter
+    def contraseña(self, contraseña):
+        self._contraseña = contraseña
 
 
 if __name__ == "__main__":
-    usuario02 = Cliente(1,'Nicolas','nicodiaz23','nico2313')
+    usuario02 = Cliente_1(1, "Nicolas", "Diaz", "2303")
     log.debug(usuario02)
-        

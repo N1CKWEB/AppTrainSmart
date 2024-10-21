@@ -7,17 +7,17 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from Logger_base import log
 import psycopg2
 from psycopg2 import pool
-from BaseDeDatos import Conexion
+from BaseDeDatos.Conexion import Conexion_1
 
 
-class CursorDelPool:
+class CursorDelPool_1:
     def __init__(self):
         self._conexion = None
         self._cursor = None
 
     def __enter__(self):
         log.debug('Inicio del método with __enter__')
-        self._conexion = Conexion.obtener_conexion()
+        self._conexion = Conexion_1.obtener_conexion()
         self._cursor = self._conexion.cursor()
         return self._cursor
 
@@ -30,4 +30,4 @@ class CursorDelPool:
             self._conexion.commit()
             log.debug('Commit de la transacción')
         self._cursor.close()
-        Conexion.liberar_conexion(self._conexion)
+        Conexion_1.liberar_conexion(self._conexion)
