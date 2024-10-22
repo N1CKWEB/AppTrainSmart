@@ -1,9 +1,13 @@
+from ClienteDAO_GYM import ClienteDAO_GYM_1
+from Cliente_GYM import Cliente_1
 import customtkinter as ctk
 from customtkinter import CTkImage,CTkScrollableFrame
 import tkinter as tk
 from tkinter import ttk, messagebox, PhotoImage, Image
 from PIL import Image, ImageTk
 import os
+
+
 
 
 class ScrollBar_1(ctk.CTkScrollableFrame):
@@ -70,19 +74,24 @@ class TrainSmart(ctk.CTk):
     
     def __init__(self):
         super().__init__()
+        self.id_cliente = None  # Inicializa el id_cliente como None
+        self.usuario_caja_de_texto = ctk.CTkEntry(self)  # Campo de entrada para el usuario
+        self.contraseña_caja_de_texto = ctk.CTkEntry(self, show='*')  # Campo de entrada para la contraseña
         self.configurar_ventana()
         self.configurar_grid()
         self.mostrar_imagen()
         self.mostrar_formulario()
         self.mostrar_botones()
         self.mostrar_link_registro()
+        # self.destroy()  # Cierra la ventana principal aquí
         
         
     def configurar_ventana(self):    
         self.geometry('300x500')
         self.resizable(0, 0)
         self.configure(bg='#0F1111')
-        
+        # self.destroy()
+                 
     def configurar_grid(self):
         self.columnconfigure(0, weight=1)
     
@@ -111,7 +120,7 @@ class TrainSmart(ctk.CTk):
         self.frame_form = ctk.CTkFrame(self)
         self.frame_form.grid(row=1, column=0, padx=20, pady=(10, 10))
 
-        # Nombre
+        # Usuario
         usuario_etiqueta = ctk.CTkLabel(self.frame_form, text='Usuario')
         usuario_etiqueta.grid(row=0, column=0, padx=10, pady=10)
 
@@ -124,16 +133,9 @@ class TrainSmart(ctk.CTk):
 
         self.contraseña_caja_de_texto = ctk.CTkEntry(self.frame_form, show="*")  # Ocultar el texto de la contraseña
         self.contraseña_caja_de_texto.grid(row=1, column=1, padx=10, pady=10)
-        
-    def mostrar_botones(self):
-        # Botón de "Iniciar Sesión"
-        login_boton = ctk.CTkLabel(self, text='Iniciar sesión', text_color='blue', cursor='hand2', bg_color='black')
-        login_boton.grid(row=2, column=0, padx=20, pady=(10, 5))
-
-        # Vincular el clic del botón con la función loguarse
-        login_boton.bind('<Button-1>', self.loguarse)
-
-    def loguarse(self, event=None):
+     
+             
+    def Segunda_Ventana(self, event=None):
         # Ventana para registrar el entrenamiento
         ventana_registro_de_entrenamiento = ctk.CTkToplevel(self)
         ventana_registro_de_entrenamiento.title('Registrar entrenamiento')
@@ -141,16 +143,18 @@ class TrainSmart(ctk.CTk):
         ventana_registro_de_entrenamiento.resizable(0, 0)
 #       
         ventana_registro_de_entrenamiento.columnconfigure(0, weight=1)
-        # BOTÓN/IMAGEN 1 - Inicia loguarse
+        
+        # BOTÓN/IMAGEN 1 - Inicia Segunda_Ventana
+        # Cargar la imagen con PIL y luego convertirla a CTkImage
         imagen_original_1 = Image.open('C:/Users/LENOVO/OneDrive/Documentos/AppTrainSmart_GYM/Imagenes/1.png')
-        imagen_redimensionada_1 = imagen_original_1.resize((410, 200))  # Redimensionar a 300x200
+        imagen_redimensionada_1 = imagen_original_1.resize((410, 200))
         imagen_tk_1 = ImageTk.PhotoImage(imagen_redimensionada_1)
         boton_registrar_entrenamiento = ctk.CTkLabel(ventana_registro_de_entrenamiento, image=imagen_tk_1, fg_color="transparent", bg_color="transparent", text='')
         boton_registrar_entrenamiento.image = imagen_tk_1
         boton_registrar_entrenamiento.grid(row=0, column=0, padx=20, pady=(5, 10), sticky="n")  # Aumenta el espaciado y centra
         boton_registrar_entrenamiento.bind("<Button-1>", self.registrar_entrenamiento)
 
-        # BOTÓN/IMAGEN 2 - Inicia loguarse_2
+        # BOTÓN/IMAGEN 2 - Inicia Segunda_Ventana_2
         imagen_original_2 = Image.open('C:/Users/LENOVO/OneDrive/Documentos/AppTrainSmart_GYM/Imagenes/2.png')
         imagen_redimensionada_2 = imagen_original_2.resize((410, 200))  # Redimensionar a 300x200
         imagen_tk_2 = ImageTk.PhotoImage(imagen_redimensionada_2)
@@ -159,7 +163,7 @@ class TrainSmart(ctk.CTk):
         boton_registrar_entrenamiento_futuro.grid(row=1, column=0, padx=20, pady=(5, 10), sticky="n")  # Aumenta el espaciado
         boton_registrar_entrenamiento_futuro.bind("<Button-1>", self.registrar_entrenamiento_futuro)
 
-        # BOTÓN/IMAGEN 3 - Inicia loguarse_3
+        # BOTÓN/IMAGEN 3 - Inicia Segunda_Ventana_3
         imagen_original_3 = Image.open('C:/Users/LENOVO/OneDrive/Documentos/AppTrainSmart_GYM/Imagenes/3.png')
         imagen_redimensionada_3 = imagen_original_3.resize((410, 200))  # Redimensionar a 300x200
         imagen_tk_3 = ImageTk.PhotoImage(imagen_redimensionada_3)
@@ -167,6 +171,39 @@ class TrainSmart(ctk.CTk):
         boton_seguimiento_registrado_anteriormente.image = imagen_tk_3
         boton_seguimiento_registrado_anteriormente.grid(row=2, column=0, padx=20, pady=(5, 10), sticky="n")  # Ajustar espaciado
         boton_seguimiento_registrado_anteriormente.bind("<Button-1>", self.seguimiento_registrado_anteriormente)
+        
+    def mostrar_botones(self):
+        
+        # Botón de "Iniciar Sesión"
+        login_boton = ctk.CTkLabel(self, text='Iniciar sesión', text_color='blue', cursor='hand2', bg_color='black')
+        login_boton.grid(row=2, column=0, padx=20, pady=(10, 5))
+
+        # Vincular el clic del botón con la función loguarse_y_guardar_cliente_en_la_bd
+        login_boton.bind('<Button-1>', lambda event: self.loguarse_y_guardar_cliente_en_la_bd())
+
+    def loguarse_y_guardar_cliente_en_la_bd(self):
+        
+        usuario = self.usuario_caja_de_texto.get()
+        contraseña = self.contraseña_caja_de_texto.get()
+
+        if not usuario or not contraseña:
+            messagebox.showerror("Error", "Por favor, completa todos los campos.")
+            return
+
+    # Aquí se verifica si el usuario ya está registrado
+        if ClienteDAO_GYM_1.validar_usuario(usuario, contraseña):
+            self.id_cliente = usuario  # Suponiendo que el usuario tiene un ID único
+            messagebox.showinfo("Inicio de Sesión", f"Usuario {usuario} inició sesión exitosamente.")
+            self.Segunda_Ventana()            
+            self.withdraw()
+            
+        else:
+            # Si las credenciales son incorrectas, verificamos si el usuario existe
+            if ClienteDAO_GYM_1.usuario_existe(usuario):
+                messagebox.showerror("Error", "Credenciales incorrectas. Por favor, intenta nuevamente.")
+            else:
+                messagebox.showinfo("Información", f"El usuario {usuario} no está registrado en la base de datos.")
+
     
     def registrar_entrenamiento(self, event=None):
 
@@ -185,15 +222,23 @@ class TrainSmart(ctk.CTk):
         values_1 = ["Cardio", "Fuerza", "Flexibilidad"]
         self.scrollable_checkbox_frame = ScrollBar_1(ventana_del_primer_boton, title="Tipo de Ejercicio", values=values_1)
         self.scrollable_checkbox_frame.grid(row=0, column=0, padx=3, pady=5, sticky="nsew")
+        
+        
+        
 
         values_2 = ['Pecho', 'Espalda', 'Piernas', 'Hombros', 'Bíceps', 'Tríceps']
         self.scrollable_checkbox_frame_2 = ScrollBar_2(ventana_del_primer_boton, title='Grupo muscular trabajado', values=values_2)
         self.scrollable_checkbox_frame_2.grid(row=1, column=0, padx=3, pady=5, sticky="nsew")
 
+
+
         values_3 = ['25m', '30m', '40m', '45m', '1h', '2h']
         self.scrollable_checkbox_frame_3 = ScrollBar_3(ventana_del_primer_boton, title='Duración del entrenamiento', values=values_3)
         self.scrollable_checkbox_frame_3.grid(row=2, column=0, padx=3, pady=5, sticky="nsew")
        
+        
+        
+        
       
        #  BOTON PARA ENVIAR COMPLETO EL FORMULARIO  
         self.button = ctk.CTkButton(ventana_del_primer_boton, text="my button", command=self.boton_enviar_registro)
@@ -234,7 +279,11 @@ class TrainSmart(ctk.CTk):
         self.button = ctk.CTkButton(ventana_del_primer_boton, text="my button", command=self.boton_enviar_registro)
         self.button.grid(row=3, column=0, padx=10, pady=10, sticky="ew", columnspan=2)
 
+       
+           
     def seguimiento_registrado_anteriormente(self, event=None):
+        
+        
         # Crear ventana para mostrar entrenamientos
         ventana_seguimiento = ctk.CTkToplevel(self)
         ventana_seguimiento.title('Entrenamientos Registrados')
@@ -269,7 +318,9 @@ class TrainSmart(ctk.CTk):
         self.btn_eliminar = ctk.CTkButton(ventana_seguimiento, text="Eliminar", command=self.eliminar_entrenamiento)
         self.btn_eliminar.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
 
+
     def editar_entrenamiento(self):
+        
         # Obtener el índice del entrenamiento seleccionado
         seleccion = self.lista_entrenamientos.curselection()
         if seleccion:
@@ -303,6 +354,7 @@ class TrainSmart(ctk.CTk):
             btn_guardar.pack(pady=10)
 
     def guardar_cambios(self, index, tipo, duracion, grupo, ventana):
+
         # Actualizar el entrenamiento en la lista
         self.entrenamientos[index] = {"tipo": tipo, "duracion": duracion, "grupo": grupo}
         self.lista_entrenamientos.delete(index)
@@ -310,6 +362,7 @@ class TrainSmart(ctk.CTk):
         ventana.destroy()  # Cerrar ventana de edición
 
     def eliminar_entrenamiento(self):
+        
         # Obtener el índice del entrenamiento seleccionado
         seleccion = self.lista_entrenamientos.curselection()
         if seleccion:
@@ -320,6 +373,7 @@ class TrainSmart(ctk.CTk):
     
         
     def mostrar_link_registro(self):
+        
         # Crear un link de texto para registrarse
         registro_link = ctk.CTkLabel(self, text="Si no tienes cuenta, regístrate", text_color="blue", cursor="hand2")
         registro_link.grid(row=3, column=0, padx=20, pady=5)  # Debajo del botón de Iniciar Sesión
@@ -360,18 +414,29 @@ class TrainSmart(ctk.CTk):
         contraseña_entry.grid(row=6, column=0, padx=10, pady=10)
 
         # Botón Registrar
-        registrar_boton = ctk.CTkButton(ventana_registro, text="Registrar", command=lambda: self.registrar_usuario(nombre_entry, usuario_entry, contraseña_entry))
+        registrar_boton = ctk.CTkButton(ventana_registro, text="Registrar", command=lambda: self.registrar_nuevo_usuario(nombre_entry, usuario_entry, contraseña_entry))
         registrar_boton.grid(row=7, column=0, padx=10, pady=20, sticky="s")
 
-    def registrar_usuario(self, nombre_entry, usuario_entry, contraseña_entry):
+    def registrar_nuevo_usuario(self, nombre_entry, usuario_entry, contraseña_entry):
         # Aquí iría la lógica de registrar al usuario
         nombre = nombre_entry.get()
         usuario = usuario_entry.get()
         contraseña = contraseña_entry.get()
-        messagebox.showinfo("Registro", f"Usuario {usuario} registrado exitosamente")
-    
-    
+        
+        if not nombre or not usuario or not contraseña:
+            messagebox.showerror("Error", "Por favor, completa todos los campos.")  
+            return
+        
+        # Validamos el valor del self.id_cliente 
+        if self.id_cliente is None:
+            cliente=Cliente_1(nombre=nombre, usuario=usuario, contraseña=contraseña)
+            ClienteDAO_GYM_1.insertar_bd(cliente)
+            messagebox.showinfo("Registro", f"Usuario {usuario} registrado exitosamente")
+        elif usuario == usuario:
+            messagebox.showinfo("Registro", f"Usuario {usuario} ya registrado!!")
+            
     
 if __name__ == "__main__":
+    
     app = TrainSmart()
     app.mainloop()

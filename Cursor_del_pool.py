@@ -7,7 +7,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from Logger_base import log
 import psycopg2
 from psycopg2 import pool
-from BaseDeDatos.Conexion import Conexion_1
+from Conexion import Conexion_1
 
 
 class CursorDelPool_1:
