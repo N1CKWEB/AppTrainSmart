@@ -293,83 +293,17 @@ class TrainSmart(ctk.CTk):
         ventana_seguimiento.columnconfigure(0, weight=1)
         ventana_seguimiento.rowconfigure([0, 1], weight=1)
 
-        # Crear un marco para mostrar los entrenamientos
-        frame_lista = ctk.CTkFrame(ventana_seguimiento)
-        frame_lista.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
-
-        # Crear un Listbox para mostrar los entrenamientos
-        self.lista_entrenamientos = tk.Listbox(frame_lista)
-        self.lista_entrenamientos.pack(fill=tk.BOTH, expand=True)
-
-        # Agregar algunos entrenamientos de ejemplo a la lista
-        self.entrenamientos = [
-            {"tipo": "Cardio", "duracion": "30m", "grupo": "Pecho"},
-            {"tipo": "Fuerza", "duracion": "1h", "grupo": "Piernas"},
-            {"tipo": "Flexibilidad", "duracion": "45m", "grupo": "Espalda"}
-        ]
-        for entrenamiento in self.entrenamientos:
-            self.lista_entrenamientos.insert(tk.END, f"{entrenamiento['tipo']} - {entrenamiento['duracion']} - {entrenamiento['grupo']}")
-
-        # Botón para editar entrenamiento
-        self.btn_editar = ctk.CTkButton(ventana_seguimiento, text="Editar", command=self.editar_entrenamiento)
-        self.btn_editar.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
-
-        # Botón para eliminar entrenamiento
-        self.btn_eliminar = ctk.CTkButton(ventana_seguimiento, text="Eliminar", command=self.eliminar_entrenamiento)
-        self.btn_eliminar.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
 
 
     def editar_entrenamiento(self):
-        
-        # Obtener el índice del entrenamiento seleccionado
-        seleccion = self.lista_entrenamientos.curselection()
-        if seleccion:
-            index = seleccion[0]
-            entrenamiento = self.entrenamientos[index]
-
-            # Crear ventana para editar el entrenamiento
-            ventana_editar = ctk.CTkToplevel(self)
-            ventana_editar.title('Editar Entrenamiento')
-            ventana_editar.geometry('300x500')
-
-            # Campos para editar
-            tipo_var = tk.StringVar(value=entrenamiento['tipo'])
-            duracion_var = tk.StringVar(value=entrenamiento['Duracion'])
-            grupo_var = tk.StringVar(value=entrenamiento['grupo'])
-
-            ctk.CTkLabel(ventana_editar, text="Tipo de Ejercicio").pack()
-            tipo_entry = ctk.CTkEntry(ventana_editar, textvariable=tipo_var)
-            tipo_entry.pack()
-
-            ctk.CTkLabel(ventana_editar, text="Duración").pack()
-            duracion_entry = ctk.CTkEntry(ventana_editar, textvariable=duracion_var)
-            duracion_entry.pack()
-
-            ctk.CTkLabel(ventana_editar, text="Grupo Muscular").pack()
-            grupo_entry = ctk.CTkEntry(ventana_editar, textvariable=grupo_var)
-            grupo_entry.pack()
-
-            # Botón para guardar cambios
-            btn_guardar = ctk.CTkButton(ventana_editar, text="Guardar", command=lambda: self.guardar_cambios(index, tipo_var.get(), duracion_var.get(), grupo_var.get(), ventana_editar))
-            btn_guardar.pack(pady=10)
+        pass
 
     def guardar_cambios(self, index, tipo, duracion, grupo, ventana):
-
-        # Actualizar el entrenamiento en la lista
-        self.entrenamientos[index] = {"tipo": tipo, "duracion": duracion, "grupo": grupo}
-        self.lista_entrenamientos.delete(index)
-        self.lista_entrenamientos.insert(index, f"{tipo} - {duracion} - {grupo}")
-        ventana.destroy()  # Cerrar ventana de edición
+        pass  
 
     def eliminar_entrenamiento(self):
-        
-        # Obtener el índice del entrenamiento seleccionado
-        seleccion = self.lista_entrenamientos.curselection()
-        if seleccion:
-            index = seleccion[0]
-            self.entrenamientos.pop(index)  # Eliminar de la lista
-            self.lista_entrenamientos.delete(index)  # Eliminar de la lista visual
-
+        pass
+              
     
         
     def mostrar_link_registro(self):
