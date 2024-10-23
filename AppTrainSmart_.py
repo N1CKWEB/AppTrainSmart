@@ -381,6 +381,7 @@ class TrainSmart(ctk.CTk):
         # Asociar la función que abre la ventana de registro
         registro_link.bind("<Button-1>", self.abrir_ventana_registro)
     
+    
     def abrir_ventana_registro(self, event=None):
         # Crear una nueva ventana para el registro
         ventana_registro = ctk.CTkToplevel(self)
@@ -434,6 +435,7 @@ class TrainSmart(ctk.CTk):
             messagebox.showinfo("Registro", f"Usuario {usuario} registrado exitosamente")
         elif usuario == usuario:
             messagebox.showinfo("Registro", f"Usuario {usuario} ya registrado!!")
+         
             
     
 if __name__ == "__main__":

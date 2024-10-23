@@ -1,3 +1,5 @@
+
+
 class Registrar_Entrenamiento_Futuro:
     
     def __init__(self, id_registrar_entrenamiento_futuro=None,

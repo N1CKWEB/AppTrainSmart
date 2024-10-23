@@ -613,3 +613,22 @@ DETAIL:  Key (usuario)=(nicodiaz23) already exists.
 04:47:18: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
 04:47:18: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
 04:47:18: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+11:53:07: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:53:07: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:53:07: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001F06C569220> 
+11:53:07: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001F06D409470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:07: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:53:07: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:53:07: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001F06D409470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:53:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
