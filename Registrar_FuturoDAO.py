@@ -37,7 +37,22 @@ class Registrar_FuturoDAO:
             cursor.execute(cls._INSERTAR, valores)
             log.debug(f"Entrenamiento futuro registrado: {entrenamiento_futuro}")
             return cursor.rowcount
-
+    
+    @classmethod
+    def insertar_bd(cls,entrenamiento_Futuro):
+      try:
+        with CursorDelPool_1() as cursor:
+            valores=(
+                entrenamiento_Futuro['tipo_de_ejercicio'],
+                entrenamiento_Futuro['duracion_estimada_del_entrenamiento'],
+                entrenamiento_Futuro['objetivo_del_entrenamiento']
+            )
+            cursor.execute(cls._INSERTAR,valores)
+            log.debug(f"Entrenamiento futuro registrado: {entrenamiento_Futuro}")
+            return cursor.rowcount
+      except Exception as e:
+          log.error(f'Error al insertar entrenamiento futuro')  
+         
     @classmethod
     def actualizar_bd(cls, entrenamiento_futuro):
         with CursorDelPool_1() as cursor:

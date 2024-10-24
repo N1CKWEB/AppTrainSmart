@@ -49,7 +49,6 @@ class ClienteDAO_GYM_1:
             cursor.execute(cls._INSERTAR, valores)
             log.debug(f"Cliente insertado: {cliente}")
             return cursor.rowcount
-
     @classmethod
     def actualizar_bd(cls, cliente):
         with CursorDelPool_1() as cursor:
@@ -103,6 +102,7 @@ class ClienteDAO_GYM_1:
 
    
 if __name__ == "__main__":
+    
     # # Insertar cliente
     # usuario02 =Registrar_Entrenamiento(1,"Cardio","Pecho","30")
     # usuario_insertado = ClienteDAO_GYM_1.insertar_bd(usuario02) 

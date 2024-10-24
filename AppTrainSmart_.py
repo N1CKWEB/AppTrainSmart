@@ -1,12 +1,15 @@
 from ClienteDAO_GYM import ClienteDAO_GYM_1
 from Cliente_GYM import Cliente_1
+from Registrar_Entrenamiento_RealizadoDAO import Registrar_Entrenamiento_RealizadoDAO
+from Registrar_FuturoDAO import Registrar_FuturoDAO
+# from Registrar_FuturoDAO import Registrar_FuturoDAO
+# from SeguimientoAnteriormenteDAO import SeguimientoAnteriormenteDAO
 import customtkinter as ctk
 from customtkinter import CTkImage,CTkScrollableFrame
 import tkinter as tk
 from tkinter import ttk, messagebox, PhotoImage, Image
 from PIL import Image, ImageTk
 import os
-
 
 
 
@@ -29,7 +32,11 @@ class ScrollBar_1(ctk.CTkScrollableFrame):
             if checkbox.get() == 1:
                 checked_checkboxes.append(checkbox.cget("text"))
         return checked_checkboxes
-    
+
+    # Agregamos el método get_selected_value
+    def get_selected_value(self):
+        return self.obtener()  # Utiliza el método existente para obtener los valores seleccionados
+
 class ScrollBar_2(ctk.CTkScrollableFrame):
     def __init__(self,master,title,values):
         super().__init__(master,label_text=title)
@@ -47,7 +54,11 @@ class ScrollBar_2(ctk.CTkScrollableFrame):
         for checkbox in self.checkboxes:
             if checkbox.get() == 1:
                 checked_checkboxes.append(checkbox.cget("text"))
-        return checked_checkboxes         
+        return checked_checkboxes        
+     
+      # Agregamos el método get_selected_value
+    def get_selected_value(self):
+        return self.obtener()  # Utiliza el método existente para obtener los valores seleccionados
     
 class ScrollBar_3(ctk.CTkScrollableFrame):
     
@@ -67,16 +78,27 @@ class ScrollBar_3(ctk.CTkScrollableFrame):
         for checkbox in self.checkboxes:
             if checkbox.get() == 1:
                 checked_checkboxes.append(checkbox.cget("text"))
-        return checked_checkboxes         
+        return checked_checkboxes        
+    
+      # Agregamos el método get_selected_value
+    def get_selected_value(self):
+        return self.obtener()  # Utiliza el método existente para obtener los valores seleccionados 
 
         
 class TrainSmart(ctk.CTk):
     
     def __init__(self):
         super().__init__()
+        self.id_registrar_entrenamiento_realizado=None
+        self.id_registrar_entrenamiento_futuro=None
+        self.id_seguimiento=None
+        self.values_1=None
+        self.values_2=None
+        self.values_3=None
         self.id_cliente = None  # Inicializa el id_cliente como None
         self.usuario_caja_de_texto = ctk.CTkEntry(self)  # Campo de entrada para el usuario
         self.contraseña_caja_de_texto = ctk.CTkEntry(self, show='*')  # Campo de entrada para la contraseña
+        
         self.configurar_ventana()
         self.configurar_grid()
         self.mostrar_imagen()
@@ -206,11 +228,10 @@ class TrainSmart(ctk.CTk):
 
     
     def registrar_entrenamiento(self, event=None):
-
         # Creamos ventana para el primer botón
         ventana_del_primer_boton = ctk.CTkToplevel(self)
         ventana_del_primer_boton.title('Registrar entrenamiento realizado')
-        
+
         # Ajustamos el tamaño de la ventana para que sea más compacto
         ventana_del_primer_boton.geometry('300x500')  
 
@@ -222,32 +243,45 @@ class TrainSmart(ctk.CTk):
         values_1 = ["Cardio", "Fuerza", "Flexibilidad"]
         self.scrollable_checkbox_frame = ScrollBar_1(ventana_del_primer_boton, title="Tipo de Ejercicio", values=values_1)
         self.scrollable_checkbox_frame.grid(row=0, column=0, padx=3, pady=5, sticky="nsew")
-        
-        
-        
 
         values_2 = ['Pecho', 'Espalda', 'Piernas', 'Hombros', 'Bíceps', 'Tríceps']
         self.scrollable_checkbox_frame_2 = ScrollBar_2(ventana_del_primer_boton, title='Grupo muscular trabajado', values=values_2)
         self.scrollable_checkbox_frame_2.grid(row=1, column=0, padx=3, pady=5, sticky="nsew")
 
-
-
         values_3 = ['25m', '30m', '40m', '45m', '1h', '2h']
         self.scrollable_checkbox_frame_3 = ScrollBar_3(ventana_del_primer_boton, title='Duración del entrenamiento', values=values_3)
         self.scrollable_checkbox_frame_3.grid(row=2, column=0, padx=3, pady=5, sticky="nsew")
-       
-        
-        
-        
-      
-       #  BOTON PARA ENVIAR COMPLETO EL FORMULARIO  
-        self.button = ctk.CTkButton(ventana_del_primer_boton, text="my button", command=self.boton_enviar_registro)
+
+        # BOTON PARA ENVIAR COMPLETO EL FORMULARIO  
+        self.button = ctk.CTkButton(ventana_del_primer_boton, text="Enviar", command=self.enviar_registro_realizado)
         self.button.grid(row=3, column=0, padx=10, pady=10, sticky="ew", columnspan=2)
+    
+    def enviar_registro_realizado(self):
+        # Obtiene los valores de cada scrollable checkbox
+        valor_1 = self.scrollable_checkbox_frame.get_selected_value()  # Tipo de ejercicio
+        valor_2 = self.scrollable_checkbox_frame_2.get_selected_value()  # Grupo muscular trabajado
+        valor_3 = self.scrollable_checkbox_frame_3.get_selected_value()  # Duración del entrenamiento
 
+        # Verifica si se han seleccionado todos los campos
+        if not valor_1 or not valor_2 or not valor_3:
+            messagebox.showerror("Error", "Por favor, completa todos los campos.")
+            return  
 
-    def boton_enviar_registro(self):
-        pass
-  
+        # Crear un diccionario con los datos a guardar
+        entrenamiento_realizado = {
+            "tipo_de_ejercicio": valor_1,
+            "grupo_muscular_trabajado": valor_2,
+            "duracion_del_entrenamiento": valor_3
+        }
+        
+        # Insertar en la base de datos
+        resultado = Registrar_Entrenamiento_RealizadoDAO.insertar_bd(entrenamiento_realizado)
+        
+        if resultado:  # Verifica que la inserción fue exitosa
+            messagebox.showinfo("Éxito", "Entrenamiento registrado correctamente.")
+        else:
+            messagebox.showerror("Error", "No se pudo registrar el entrenamiento.")    
+            
     def registrar_entrenamiento_futuro(self, event=None):
              
         # Creamos ventana para el primer botón
@@ -276,9 +310,38 @@ class TrainSmart(ctk.CTk):
        
       
        #  BOTON PARA ENVIAR COMPLETO EL FORMULARIO  
-        self.button = ctk.CTkButton(ventana_del_primer_boton, text="my button", command=self.boton_enviar_registro)
+        self.button = ctk.CTkButton(ventana_del_primer_boton, text="my button", command=self.enviar_registro_futuro)
         self.button.grid(row=3, column=0, padx=10, pady=10, sticky="ew", columnspan=2)
-
+       
+       
+    def enviar_registro_futuro(self):
+        
+        # Obtienes los valores de cada scrollable checkbox
+        valor_1=self.scrollable_checkbox_frame.get_selected_value()
+        valor_2=self.scrollable_checkbox_frame_2.get_selected_value()
+        valor_3=self.scrollable_checkbox_frame_3.get_selected_value()
+        
+        
+        # Verifica si se han seleccionado todos los campos
+        if not valor_1 or not valor_2 or not valor_3:
+            messagebox.showerror('Error','Por favor, completa todo los campos')
+            return
+        
+        # Creamos un diccionario con los datos a guardar
+        
+        entrenamiento_futuro={
+            'tipo_de_ejercicio':valor_1,
+            'duracion_estimada_del_entrenamiento':valor_2,
+            'objetivo_del_entrenamiento':valor_3
+        }
+        
+        resultado=Registrar_FuturoDAO.insertar_bd(entrenamiento_futuro)
+         
+        if resultado:
+            messagebox.showinfo('Exito','Entrenamiento futuro registrado correctamente')
+        else:
+            messagebox.showerror('Error','No se pudo registrar el entrenamiento futuro') 
+        
        
            
     def seguimiento_registrado_anteriormente(self, event=None):
