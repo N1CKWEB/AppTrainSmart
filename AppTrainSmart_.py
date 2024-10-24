@@ -2,6 +2,8 @@ from ClienteDAO_GYM import ClienteDAO_GYM_1
 from Cliente_GYM import Cliente_1
 from Registrar_Entrenamiento_RealizadoDAO import Registrar_Entrenamiento_RealizadoDAO
 from Registrar_FuturoDAO import Registrar_FuturoDAO
+from Registrar_Entrenamiento import Registrar_Entrenamiento
+from Registrar_Entrenamiento_Futuro import Registrar_Entrenamiento_Futuro
 # from Registrar_FuturoDAO import Registrar_FuturoDAO
 # from SeguimientoAnteriormenteDAO import SeguimientoAnteriormenteDAO
 import customtkinter as ctk
@@ -297,16 +299,16 @@ class TrainSmart(ctk.CTk):
 
         # Agregar ScrollBar dentro de la ventana del primer botón
         values_1 = ["Cardio", "Fuerza", "Flexibilidad"]
-        self.scrollable_checkbox_frame = ScrollBar_1(ventana_del_primer_boton, title="Tipo de Ejercicio", values=values_1)
-        self.scrollable_checkbox_frame.grid(row=0, column=0, padx=3, pady=5, sticky="nsew")
+        self.scrollable_checkbox_frame_4 = ScrollBar_1(ventana_del_primer_boton, title="Tipo de Ejercicio", values=values_1)
+        self.scrollable_checkbox_frame_4.grid(row=0, column=0, padx=3, pady=5, sticky="nsew")
 
         values_2 = ['25m', '30m', '40m', '45m', '1h', '2h']
-        self.scrollable_checkbox_frame_2 = ScrollBar_2(ventana_del_primer_boton, title='Duración estimada del entrenamiento', values=values_2)
-        self.scrollable_checkbox_frame_2.grid(row=1, column=0, padx=3, pady=5, sticky="nsew")
+        self.scrollable_checkbox_frame_5 = ScrollBar_2(ventana_del_primer_boton, title='Duración estimada del entrenamiento', values=values_2)
+        self.scrollable_checkbox_frame_5.grid(row=1, column=0, padx=3, pady=5, sticky="nsew")
 
         values_3 = ['Perder Peso', 'Mejorar Resistencia', 'Ganar masa muscular']
-        self.scrollable_checkbox_frame_3 = ScrollBar_3(ventana_del_primer_boton, title='Objetivo del entrenamiento', values=values_3)
-        self.scrollable_checkbox_frame_3.grid(row=2, column=0, padx=3, pady=5, sticky="nsew")
+        self.scrollable_checkbox_frame_6 = ScrollBar_3(ventana_del_primer_boton, title='Objetivo del entrenamiento', values=values_3)
+        self.scrollable_checkbox_frame_6.grid(row=2, column=0, padx=3, pady=5, sticky="nsew")
        
       
        #  BOTON PARA ENVIAR COMPLETO EL FORMULARIO  
@@ -317,9 +319,9 @@ class TrainSmart(ctk.CTk):
     def enviar_registro_futuro(self):
         
         # Obtienes los valores de cada scrollable checkbox
-        valor_1=self.scrollable_checkbox_frame.get_selected_value()
-        valor_2=self.scrollable_checkbox_frame_2.get_selected_value()
-        valor_3=self.scrollable_checkbox_frame_3.get_selected_value()
+        valor_1=self.scrollable_checkbox_frame_4.get_selected_value()
+        valor_2=self.scrollable_checkbox_frame_5.get_selected_value()
+        valor_3=self.scrollable_checkbox_frame_6.get_selected_value()
         
         
         # Verifica si se han seleccionado todos los campos
@@ -339,13 +341,13 @@ class TrainSmart(ctk.CTk):
          
         if resultado:
             messagebox.showinfo('Exito','Entrenamiento futuro registrado correctamente')
+            print(f'Información guardada es: {resultado}')
         else:
             messagebox.showerror('Error','No se pudo registrar el entrenamiento futuro') 
         
        
-           
+    #   ÚLTIMA PARTE DE REALIZAR
     def seguimiento_registrado_anteriormente(self, event=None):
-        
         
         # Crear ventana para mostrar entrenamientos
         ventana_seguimiento = ctk.CTkToplevel(self)
@@ -355,19 +357,89 @@ class TrainSmart(ctk.CTk):
         # Hacer que las columnas y filas se ajusten
         ventana_seguimiento.columnconfigure(0, weight=1)
         ventana_seguimiento.rowconfigure([0, 1], weight=1)
+        
+        
+
+        # Crear un marco para mostrar los entrenamientos
+        frame_lista_1 = ctk.CTkFrame(ventana_seguimiento)
+        frame_lista_1.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
+        
+        # tipo_de_ejercicio
+        self.tipo_de_ejercicio_caja_de_texto=ctk.CTkEntry(frame_lista_1)
+        self.tipo_de_ejercicio_caja_de_texto.grid(row=0, column=0, padx=10, pady=5,sticky='ew')
+
+        # grupo_muscular_trabajado
+        self.grupo_muscular_trabajado_caja_de_texto=ctk.CTkEntry(frame_lista_1)
+        self.grupo_muscular_trabajado_caja_de_texto.grid(row=1,column=0,padx=10,pady=5,sticky='ew')
+        
+        # duracion_del_entrenamiento
+        self.duracion_del_entrenamiento_caja_de_texto=ctk.CTkEntry(frame_lista_1)
+        self.duracion_del_entrenamiento_caja_de_texto.grid(row=2,column=0,padx=10,pady=5,sticky='ew')
+        
+        
+        # entrenamientos=Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd()
+        
+        # for entrenamiento in entrenamientos:
+        #          frame_lista_1.insert(parent='',index=tk.END,values=[entrenamiento['tipo_de_ejercicio'],entrenamiento['grupo_muscular_trabajado'],entrenamiento['duracion_del_entrenamiento']])
+                 
+                 
+        # Botón para editar entrenamiento
+        self.btn_editar = ctk.CTkButton(ventana_seguimiento, text="Editar", command=self.editar_entrenamiento)
+        self.btn_editar.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
+
+        # Botón para eliminar entrenamiento
+        self.btn_eliminar = ctk.CTkButton(ventana_seguimiento, text="Eliminar", command=self.eliminar_entrenamiento)
+        self.btn_eliminar.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
 
 
 
     def editar_entrenamiento(self):
-        pass
+        # Obtener el índice del entrenamiento seleccionado
+        seleccion = self.lista_entrenamientos.curselection()
+        if seleccion:
+            index = seleccion[0]
+            entrenamiento = self.entrenamientos[index]
+
+            # Crear ventana para editar el entrenamiento
+            ventana_editar = ctk.CTkToplevel(self)
+            ventana_editar.title('Editar Entrenamiento')
+            ventana_editar.geometry('300x500')
+
+            # Campos para editar
+            tipo_var = tk.StringVar(value=entrenamiento['tipo'])
+            duracion_var = tk.StringVar(value=entrenamiento['Duracion'])
+            grupo_var = tk.StringVar(value=entrenamiento['grupo'])
+
+            ctk.CTkLabel(ventana_editar, text="Tipo de Ejercicio").pack()
+            tipo_entry = ctk.CTkEntry(ventana_editar, textvariable=tipo_var)
+            tipo_entry.pack()
+
+            ctk.CTkLabel(ventana_editar, text="Duración").pack()
+            duracion_entry = ctk.CTkEntry(ventana_editar, textvariable=duracion_var)
+            duracion_entry.pack()
+
+            ctk.CTkLabel(ventana_editar, text="Grupo Muscular").pack()
+            grupo_entry = ctk.CTkEntry(ventana_editar, textvariable=grupo_var)
+            grupo_entry.pack()
+
+            # Botón para guardar cambios
+            btn_guardar = ctk.CTkButton(ventana_editar, text="Guardar", command=lambda: self.guardar_cambios(index, tipo_var.get(), duracion_var.get(), grupo_var.get(), ventana_editar))
+            btn_guardar.pack(pady=10)
 
     def guardar_cambios(self, index, tipo, duracion, grupo, ventana):
-        pass  
+        # Actualizar el entrenamiento en la lista
+        self.entrenamientos[index] = {"tipo": tipo, "duracion": duracion, "grupo": grupo}
+        self.lista_entrenamientos.delete(index)
+        self.lista_entrenamientos.insert(index, f"{tipo} - {duracion} - {grupo}")
+        ventana.destroy()  # Cerrar ventana de edición
 
     def eliminar_entrenamiento(self):
-        pass
-              
-    
+        # Obtener el índice del entrenamiento seleccionado
+        seleccion = self.lista_entrenamientos.curselection()
+        if seleccion:
+            index = seleccion[0]
+            self.entrenamientos.pop(index)  # Eliminar de la lista
+            self.lista_entrenamientos.delete(index)  # Eliminar de la lista visual
         
     def mostrar_link_registro(self):
         

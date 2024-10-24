@@ -21,17 +21,20 @@ class Registrar_Entrenamiento_RealizadoDAO:
                 registros = cursor.fetchall()
                 entrenamientos = []
                 for registro in registros:
-                    entrenamiento = Registrar_Entrenamiento(
-                        id_registrar_entrenamiento_realizado=registro[0],
-                        tipo_de_ejercicio=registro[1],
-                        grupo_muscular_trabajado=registro[2],
-                        duracion_del_entrenamiento=registro[3]
-                    )
+                    # Crear un diccionario similar a la estructura utilizada en el método insertar_bd
+                    entrenamiento = {
+                        "id_registrar_entrenamiento_realizado": registro[0],
+                        "tipo_de_ejercicio": registro[1],
+                        "grupo_muscular_trabajado": registro[2],
+                        "duracion_del_entrenamiento": registro[3]
+                    }
                     entrenamientos.append(entrenamiento)
+                log.debug(f"Entrenamientos seleccionados: {entrenamientos}")
                 return entrenamientos
         except Exception as e:
             log.error(f"Error al seleccionar entrenamiento: {e}")
             return None
+    
 
     @classmethod
     def insertar_bd(cls, entrenamiento):
@@ -99,10 +102,14 @@ class Registrar_Entrenamiento_RealizadoDAO:
 if __name__ == "__main__":
     # Ejemplo de inserción de entrenamiento
     nuevo_entrenamiento = Registrar_Entrenamiento(
-        tipo_de_ejercicio="Cardio",
-        grupo_muscular_trabajado="Pecho",
+        # tipo_de_ejercicio="Fuerza",
+        grupo_muscular_trabajado="Espalda",
         duracion_del_entrenamiento="30"
     )
+    nuevo_entrenamiento_2=Registrar_Entrenamiento()
     
-    entrenamiento_insertado = Registrar_Entrenamiento_RealizadoDAO.insertar_bd(nuevo_entrenamiento) 
+    entrenamiento_insertado = Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd(nuevo_entrenamiento) 
     log.info(f"Entrenamiento insertado: {entrenamiento_insertado}")
+
+    entrenamiento_seleccionado=Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd(nuevo_entrenamiento)
+    log.info(f"Entrenamiento seleccionado: {entrenamiento_seleccionado}")

@@ -1252,3 +1252,775 @@ DETAIL:  Key (id_registrar_entrenamiento_futuro)=(2) is not present in table "re
 09:46:21: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
 09:46:21: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
 09:46:21: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000214A2251360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:49:07: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+09:49:07: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+09:49:07: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000023169E90BF0> 
+09:49:07: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002316A051360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:49:07: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+09:49:07: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+09:49:07: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002316A051360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+09:49:08: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+09:54:30: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+09:54:30: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+09:54:30: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002333E4AE630> 
+09:54:30: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002333EC59250; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:54:30: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+09:54:30: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: type object 'ClienteDAO_GYM_1' has no attribute '_OBTENER_ENTRENAMIENTOS' 
+09:54:30: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002333EC59250; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:56:26: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+09:56:26: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+09:56:26: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001D7E78D53A0> 
+09:56:26: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D7E9ED9250; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:56:26: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+09:56:26: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: type object 'ClienteDAO_GYM_1' has no attribute '_OBTENER_ENTRENAMIENTOS' 
+09:56:26: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001D7E9ED9250; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:58:43: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+09:58:43: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+09:58:43: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001FA23FAA330> 
+09:58:43: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001FA23F89470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:58:43: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+09:58:43: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+09:58:43: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001FA23F89470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+09:58:44: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:01:45: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:01:45: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:01:45: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000024317D2B950> 
+10:01:45: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002431A991360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:01:45: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:01:45: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:01:45: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002431A991360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:01:46: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:10:13: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:10:13: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:10:13: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001F0F1DB38F0> 
+10:10:13: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001F0F1FA5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:10:13: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:10:13: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:10:13: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001F0F1FA5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:10:13: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:28:21: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:28:21: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:28:22: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x00000213F3945820> 
+10:28:22: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000213F3D21360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:28:22: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:28:22: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:28:22: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000213F3D21360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:28:22: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:29:46: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:29:46: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:29:47: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001E7C2DC2090> 
+10:29:47: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001E7C3255360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:29:47: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:29:47: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:29:47: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001E7C3255360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:29:47: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:44:09: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:44:09: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:44:09: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000021D317480E0> 
+10:44:09: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000021D318F5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:44:09: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:44:09: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:44:09: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000021D318F5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:44:10: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:46:10: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:46:10: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:46:10: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002E884798260> 
+10:46:10: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002E8870C5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:46:10: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:46:10: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:46:10: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002E8870C5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:46:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:56:33: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:56:33: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:56:33: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001B520976120> 
+10:56:33: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001B520955470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:56:33: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:56:33: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:56:33: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001B520955470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:56:33: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:58:11: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:58:11: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+10:58:11: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x00000238C3EE0260> 
+10:58:11: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000238C4195470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:58:11: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:58:11: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:58:11: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000238C4195470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+10:58:12: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+10:58:18: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+10:58:18: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000238C4195470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+10:58:18: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:46] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Pecho'], 'duracion_del_entrenamiento': ['25m']} 
+10:58:18: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+10:58:18: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+10:58:18: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000238C4195470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:02:12: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:02:12: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:02:12: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x00000254A0561340> 
+11:02:12: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000254A1475470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:02:12: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:02:12: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:02:12: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000254A1475470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:02:13: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+11:02:23: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:02:23: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000254A1475470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:02:23: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:46] Entrenamiento registrado: {'tipo_de_ejercicio': ['Cardio'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+11:02:23: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:02:23: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:02:23: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000254A1475470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:05:08: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:05:08: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:05:08: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000013714291340> 
+11:05:08: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000013715115470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:05:08: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:05:08: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:05:08: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000013715115470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:05:09: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+11:05:57: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:05:57: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:05:57: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000022453921340> 
+11:05:57: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000022454745470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:05:57: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:05:57: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:05:57: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000022454745470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:05:58: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+11:06:07: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:06:07: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000022454745470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:06:07: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:46] Entrenamiento registrado: {'tipo_de_ejercicio': ['Cardio'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+11:06:07: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:06:07: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:06:07: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000022454745470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:19:10: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:19:10: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:19:10: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000020A8923A0F0> 
+11:19:10: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000020A8A095360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:19:10: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:19:10: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:19:10: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000020A8A095360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:19:11: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+11:19:20: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:19:20: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000020A8A095360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:19:20: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:46] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['25m']} 
+11:19:20: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:19:20: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:19:20: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000020A8A095360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:39: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:34:39: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:34:39: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000027AEB480260> 
+11:34:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:39: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:34:39: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:34:39: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:39: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:34:39: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:39: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:34:39: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:34:39: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:45: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:34:45: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:45: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:34:45: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:34:45: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:45: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:34:45: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:45: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:34:45: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:34:45: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027AEB685470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:58: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:34:58: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:34:58: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001D625A4A090> 
+11:34:58: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D625C25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:34:58: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:34:58: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:34:58: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001D625C25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+11:35:00: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+11:35:11: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:35:11: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001D625C25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:35:11: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:46] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+11:35:11: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:35:11: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+11:35:11: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001D625C25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:44: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:53:44: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:53:44: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000016A5767F140> 
+11:53:44: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000016A57A05BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:44: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:53:44: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'Registrar_Entrenamiento' 
+11:53:44: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000016A57A05BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:44: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:33] Error al seleccionar entrenamiento: can't adapt type 'Registrar_Entrenamiento' 
+11:53:44: INFO [Registrar_Entrenamiento_RealizadoDAO.py:109] Entrenamiento insertado: None 
+11:53:44: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:53:44: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000016A57A05BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:44: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:53:44: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'Registrar_Entrenamiento' 
+11:53:44: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000016A57A05BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:53:44: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:33] Error al seleccionar entrenamiento: can't adapt type 'Registrar_Entrenamiento' 
+11:53:44: INFO [Registrar_Entrenamiento_RealizadoDAO.py:112] Entrenamiento seleccionado: None 
+11:55:33: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:55:33: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:55:33: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000020795CCF140> 
+11:55:33: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000020796039BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:55:33: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:55:33: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'Registrar_Entrenamiento' 
+11:55:33: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000020796039BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:55:33: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:33] Error al seleccionar entrenamiento: can't adapt type 'Registrar_Entrenamiento' 
+11:55:33: INFO [Registrar_Entrenamiento_RealizadoDAO.py:118] No se encontró el entrenamiento seleccionado. 
+11:56:04: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+11:56:04: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+11:56:04: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000024975126C60> 
+11:56:04: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000024975209BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:56:04: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+11:56:04: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'Registrar_Entrenamiento' 
+11:56:04: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000024975209BE0; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+11:56:04: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:33] Error al seleccionar entrenamiento: can't adapt type 'Registrar_Entrenamiento' 
+11:56:04: INFO [Registrar_Entrenamiento_RealizadoDAO.py:118] No se encontró el entrenamiento seleccionado. 
+12:07:07: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:07:07: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:07:07: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000019F5BA886B0> 
+12:07:07: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000019F5BCC1360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:07:07: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:07:07: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:07:07: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000019F5BCC1360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:07:08: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+12:07:20: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:07:20: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000019F5BCC1360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:07:20: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:46] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+12:07:20: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:07:20: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:07:20: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000019F5BCC1360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:19:30: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:19:30: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:19:30: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002959DE26150> 
+12:19:30: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002959E055360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:19:30: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:19:30: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:19:30: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002959E055360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:19:30: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+12:19:38: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:19:38: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002959E055360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:19:38: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Flexibilidad'], 'grupo_muscular_trabajado': ['Tríceps'], 'duracion_del_entrenamiento': ['45m']} 
+12:19:38: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:19:38: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:19:38: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002959E055360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:20: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:20:20: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:20:20: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x00000233D8040BF0> 
+12:20:20: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000233D8275360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:20: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:20:20: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:20:20: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000233D8275360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:20:21: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+12:20:29: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:20:29: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000233D8275360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:29: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Piernas'], 'duracion_del_entrenamiento': ['25m']} 
+12:20:29: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:20:29: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:20:29: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000233D8275360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:58: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:20:58: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:20:58: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000019DF6CF87A0> 
+12:20:58: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000019DF6DF5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:58: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:20:58: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:20:58: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000019DF6DF5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:20:59: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+12:21:04: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:21:04: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000019DF6DF5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:21:04: DEBUG [Registrar_FuturoDAO.py:51] Entrenamiento futuro registrado: {'tipo_de_ejercicio': ['Fuerza'], 'duracion_estimada_del_entrenamiento': ['30m'], 'objetivo_del_entrenamiento': ['Perder Peso']} 
+12:21:04: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:21:04: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:21:04: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000019DF6DF5360; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:28:41: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:28:41: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:28:41: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001EDA1ECA150> 
+12:28:41: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:28:41: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:28:41: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:28:41: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:28:41: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+12:28:48: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:28:48: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:28:48: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:28:48: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'Registrar_Entrenamiento' 
+12:28:48: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:28:48: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:33] Error al seleccionar entrenamiento: can't adapt type 'Registrar_Entrenamiento' 
+12:29:00: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:29:00: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:29:00: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+12:29:00: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:29:00: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:29:00: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:29:08: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:29:08: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:29:08: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:29:08: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'Registrar_Entrenamiento' 
+12:29:08: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001EDA21E1470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:29:08: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:33] Error al seleccionar entrenamiento: can't adapt type 'Registrar_Entrenamiento' 
+12:38:04: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:38:04: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:38:04: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002200DC8D100> 
+12:38:04: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002200DD95470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:38:04: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:38:04: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:38:04: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002200DD95470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:38:04: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:38:04: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:38:04: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:38:04: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:38:05: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+12:38:13: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:38:13: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002200DD95470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:38:13: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+12:38:13: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:38:13: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:38:13: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002200DD95470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:49:32: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+12:49:32: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+12:49:32: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x00000229C646AFF0> 
+12:49:32: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x00000229C7301580; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:49:32: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+12:49:32: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+12:49:32: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x00000229C7301580; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+12:49:34: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:34:30: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:34:30: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:34:30: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001C9A5603920> 
+02:34:30: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001C9A5E75470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:34:30: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:34:30: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:34:30: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001C9A5E75470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:34:31: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:35:47: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:35:47: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:35:47: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001738A771340> 
+02:35:47: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001738A955470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:35:47: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:35:47: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:35:47: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001738A955470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:35:48: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:36:25: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:36:25: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:36:25: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002F0FE25BD70> 
+02:36:25: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002F0FE3A5470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:36:25: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:36:25: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:36:25: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002F0FE3A5470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:36:25: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:39:47: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:39:47: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:39:47: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001FDD7C83B30> 
+02:39:47: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001FDD84A5470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:39:47: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:39:47: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:39:47: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001FDD84A5470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:39:48: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:40:36: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:40:36: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:40:36: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002425053B4D0> 
+02:40:37: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:40:37: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:40:37: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:40:37: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:40:37: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:40:37: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:40:37: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:40:37: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:40:37: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:40:40: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:40:40: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:40:40: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:40:40: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:40:40: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:40:50: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:41:02: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:41:02: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:41:02: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+02:41:02: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:41:02: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:41:02: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000024253105470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:51: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:50:51: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:50:51: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000002D0641199D0> 
+02:50:51: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:52: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:50:52: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:50:52: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:52: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:50:52: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:52: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:50:52: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:50:52: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:56: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:50:56: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:56: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:50:56: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:50:56: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:56: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:50:56: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:50:56: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:50:56: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:50:56: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:02: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:51:02: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:02: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:51:02: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:51:02: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000002D064225470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:51:03: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:55:14: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:55:14: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+02:55:15: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x000001E1E240B830> 
+02:55:15: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001E1E3125470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:55:15: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:55:15: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:55:15: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001E1E3125470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+02:55:15: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+02:55:16: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:55:16: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001E1E3125470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:55:16: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:55:16: ERROR [Cursor_del_pool.py:28] Ocurrió una excepción, se hace rollback: can't adapt type 'dict' 
+02:55:16: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001E1E3125470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:55:16: ERROR [Registrar_Entrenamiento_RealizadoDAO.py:35] Error al seleccionar entrenamiento: can't adapt type 'dict' 
+02:55:25: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+02:55:25: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x000001E1E3125470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+02:55:25: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+02:55:25: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+02:55:25: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+02:55:25: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x000001E1E3125470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:00:59: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+03:00:59: DEBUG [Conexion.py:20] Intentando crear el pool de conexiones 
+03:00:59: DEBUG [Conexion.py:30] Creación del pool exitosa <psycopg2.pool.SimpleConnectionPool object at 0x0000027D18D11400> 
+03:00:59: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027D18F25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:00:59: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+03:00:59: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+03:00:59: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027D18F25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 62126 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 60479 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'IHDR' 16 13 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'pHYs' 41 9 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'iTXt' 62 1282 
+03:01:00: DEBUG [PngImagePlugin.py:197] STREAM b'IDAT' 1356 82856 
+03:01:10: DEBUG [Cursor_del_pool.py:19] Inicio del método with __enter__ 
+03:01:10: DEBUG [Conexion.py:39] Conexión obtenida del pool <connection object at 0x0000027D18F25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
+03:01:10: DEBUG [Registrar_Entrenamiento_RealizadoDAO.py:49] Entrenamiento registrado: {'tipo_de_ejercicio': ['Fuerza'], 'grupo_muscular_trabajado': ['Espalda'], 'duracion_del_entrenamiento': ['30m']} 
+03:01:10: DEBUG [Cursor_del_pool.py:25] Se ejecuta el método __exit__ 
+03:01:10: DEBUG [Cursor_del_pool.py:31] Commit de la transacción 
+03:01:10: DEBUG [Conexion.py:45] Regresamos la conexión al pool: <connection object at 0x0000027D18F25470; dsn: 'user=postgres password=xxx dbname=AppTrainSmart host=127.0.0.1 port=5432', closed: 0> 
