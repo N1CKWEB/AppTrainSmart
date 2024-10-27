@@ -14,14 +14,19 @@ class Registrar_Entrenamiento_RealizadoDAO:
     _VALIDAR_ENTRENAMIENTO = "SELECT * FROM Registrar_Entrenamiento_Realizado WHERE tipo_de_ejercicio=%s AND grupo_muscular_trabajado=%s AND duracion_del_entrenamiento=%s"
 
     @classmethod
-    def seleccionar_bd(cls, id_registrar_entrenamiento_realizado):
+    def seleccionar_bd(cls, id_registrar_entrenamiento_realizado=None):
         try:
             with CursorDelPool_1() as cursor:
-                cursor.execute(cls._SELECCIONAR, (id_registrar_entrenamiento_realizado,))
+                if id_registrar_entrenamiento_realizado is None:
+                    # Si no se proporciona ID, seleccionar todos los entrenamientos
+                    cursor.execute("SELECT * FROM Registrar_Entrenamiento_Realizado")
+                else:
+                    # Si se proporciona ID, seleccionar solo ese entrenamiento
+                    cursor.execute(cls._SELECCIONAR, (id_registrar_entrenamiento_realizado,))
+                
                 registros = cursor.fetchall()
                 entrenamientos = []
                 for registro in registros:
-                    # Crear un diccionario similar a la estructura utilizada en el método insertar_bd
                     entrenamiento = {
                         "id_registrar_entrenamiento_realizado": registro[0],
                         "tipo_de_ejercicio": registro[1],
@@ -34,7 +39,6 @@ class Registrar_Entrenamiento_RealizadoDAO:
         except Exception as e:
             log.error(f"Error al seleccionar entrenamiento: {e}")
             return None
-    
 
     @classmethod
     def insertar_bd(cls, entrenamiento):

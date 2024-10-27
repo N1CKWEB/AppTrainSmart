@@ -1,140 +1,228 @@
-import tkinter as tk
-from tkinter import ttk
 import customtkinter as ctk
-from datetime import date
+from tkinter import ttk, messagebox
+from PIL import Image, ImageTk
+import os
+from Registrar_Entrenamiento_RealizadoDAO import Registrar_Entrenamiento_RealizadoDAO
 
-# Supongamos que estas son las clases importadas
-from Registrar_Entrenamiento import Registrar_Entrenamiento
-from Registrar_Entrenamiento_Futuro import Registrar_Entrenamiento_Futuro
-from Seguimiento_Registrado_Anteriormente import Seguimiento_Registrado_Anteriormente
-from ClienteDAO_GYM import ClienteDAO_GYM_1  # Función de base de datos para obtener datos
-
-# Clase principal para la ventana de seguimiento
-class App(ctk.CTk):
+class TrainSmart(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title('Sistema de Seguimiento de Entrenamientos')
-        self.geometry('300x500')  # Ventana ajustada a 300x500
+        self.title("TrainSmart")
+        self.geometry('300x500')
+        self.configure(fg_color='#0F1111')
         
-        # Botón para abrir la ventana de seguimiento
-        btn_seguimiento = ctk.CTkButton(self, text="Ver Seguimientos", command=self.seguimiento_registrado_anteriormente)
-        btn_seguimiento.pack(pady=20)
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=1)
+        
+        self.mostrar_imagen()
+        self.mostrar_formulario()
+        self.mostrar_botones()
+        self.mostrar_link_registro()
 
-    # Función para mostrar el seguimiento de entrenamientos
-    def seguimiento_registrado_anteriormente(self):
-        ventana_seguimiento = ctk.CTkToplevel(self)
-        ventana_seguimiento.title('Seguimiento de Entrenamientos')
-        ventana_seguimiento.geometry('300x500')  # Ajustado a 300x500
+    def mostrar_imagen(self):
+        ruta_imagen = 'C:/Users/LENOVO/OneDrive/Documentos/AppTrainSmart_GYM/Imagenes/Trainsmart.png'
+        if not os.path.isfile(ruta_imagen):
+            messagebox.showerror("Error", f"No se encontró el archivo: {ruta_imagen}")
+            return
+        
+        imagen = Image.open(ruta_imagen)
+        imagen_redimensionada = imagen.resize((100, 100))  # Ajusta el tamaño según necesites
+        imagen_tk = ImageTk.PhotoImage(imagen_redimensionada)
+        
+        imagen_label = ctk.CTkLabel(self, image=imagen_tk, text="")
+        imagen_label.image = imagen_tk
+        imagen_label.grid(row=0, column=0, padx=20, pady=(20, 10))
 
-        # Obtener entrenamientos desde la base de datos
-        entrenamientos = ClienteDAO_GYM_1.obtener_entrenamientos()  # Esta función debería devolver entrenamientos de la BD
+    def mostrar_formulario(self):
+        self.frame_form = ctk.CTkFrame(self)
+        self.frame_form.grid(row=1, column=0, padx=20, pady=(10, 10), sticky="nsew")
 
-        # Crear tabla para mostrar entrenamientos
-        columnas = ("Fecha", "Tipo de Ejercicio", "Duración", "Calorías Quemadas", "Comentarios")
-        tabla = ttk.Treeview(ventana_seguimiento, columns=columnas, show="headings", height=5)
+        ctk.CTkLabel(self.frame_form, text='Usuario').grid(row=0, column=0, padx=10, pady=10)
+        self.usuario_entry = ctk.CTkEntry(self.frame_form)
+        self.usuario_entry.grid(row=0, column=1, padx=10, pady=10)
+        
+        ctk.CTkLabel(self.frame_form, text='Contraseña').grid(row=1, column=0, padx=10, pady=10)
+        self.contraseña_entry = ctk.CTkEntry(self.frame_form, show="*")
+        self.contraseña_entry.grid(row=1, column=1, padx=10, pady=10)
 
-        # Configurar las columnas
-        for col in columnas:
-            tabla.heading(col, text=col)
-            tabla.column(col, anchor="center", width=70)
+    def mostrar_botones(self):
+        login_boton = ctk.CTkButton(self, text='Iniciar sesión', command=self.loguarse_y_guardar_cliente_en_la_bd)
+        login_boton.grid(row=2, column=0, padx=20, pady=(10, 5))
 
-        # Insertar datos en la tabla
+    def loguarse_y_guardar_cliente_en_la_bd(self):
+        # Aquí iría la lógica de autenticación
+        self.Segunda_Ventana()
+
+    def Segunda_Ventana(self):
+        ventana_registro_de_entrenamiento = ctk.CTkToplevel(self)
+        ventana_registro_de_entrenamiento.title('Registrar entrenamiento')
+        ventana_registro_de_entrenamiento.geometry('300x500')
+        ventana_registro_de_entrenamiento.configure(fg_color='#0F1111')
+
+        ctk.CTkButton(ventana_registro_de_entrenamiento, text="Ver Entrenamientos", command=self.mostrar_entrenamientos).pack(pady=20)
+
+    def mostrar_entrenamientos(self):
+        entrenamientos_window = ctk.CTkToplevel(self)
+        entrenamientos_window.title("Entrenamientos Registrados")
+        entrenamientos_window.geometry('600x400')
+        entrenamientos_window.configure(fg_color='#0F1111')
+
+        # Crear un frame para contener el Treeview y la scrollbar
+        frame = ctk.CTkFrame(entrenamientos_window)
+        frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+        # Crear un Treeview con estilo personalizado
+        style = ttk.Style()
+        style.theme_use("default")
+        style.configure("Treeview", 
+                        background="#2a2d2e", 
+                        foreground="white", 
+                        rowheight=25, 
+                        fieldbackground="#2a2d2e", 
+                        bordercolor="#343638",
+                        borderwidth=0)
+        style.map('Treeview', background=[('selected', '#22559b')])
+        style.configure("Treeview.Heading",
+                        background="#565b5e", 
+                        foreground="white", 
+                        relief="flat")
+        style.map("Treeview.Heading",
+                  background=[('active', '#3484F0')])
+
+        tree = ttk.Treeview(frame, columns=("ID", "Tipo", "Grupos Musculares", "Duración"), show="headings")
+        tree.heading("ID", text="ID")
+        tree.heading("Tipo", text="Tipo de Ejercicio")
+        tree.heading("Grupos Musculares", text="Grupos Musculares")
+        tree.heading("Duración", text="Duración (min)")
+
+        # Configurar las columnas para que se ajusten al contenido
+        tree.column("ID", width=50)
+        tree.column("Tipo", width=150)
+        tree.column("Grupos Musculares", width=200)
+        tree.column("Duración", width=100)
+
+        # Agregar scrollbar
+        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=tree.yview)
+        scrollbar.pack(side="right", fill="y")
+        tree.configure(yscrollcommand=scrollbar.set)
+
+        tree.pack(fill="both", expand=True)
+
+        # Insertar datos en el Treeview
+        entrenamientos = Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd(None)
         for entrenamiento in entrenamientos:
-            tabla.insert("", tk.END, values=(entrenamiento["fecha"], entrenamiento["tipo_ejercicio"],
-                                             entrenamiento["duracion"], entrenamiento["calorias"],
-                                             entrenamiento["comentarios"]))
+            tree.insert("", "end", values=(
+                entrenamiento["id_registrar_entrenamiento_realizado"],
+                entrenamiento["tipo_de_ejercicio"],
+                entrenamiento["grupo_muscular_trabajado"],
+                entrenamiento["duracion_del_entrenamiento"]
+            ))
 
-        tabla.pack(pady=5)
+        # Frame para los botones
+        button_frame = ctk.CTkFrame(entrenamientos_window)
+        button_frame.pack(fill="x", padx=10, pady=10)
 
-        # Agregar botones para editar y eliminar
-        selected_item = tabla.selection()  # Se obtiene el elemento seleccionado
+        # Botones de editar y eliminar
+        ctk.CTkButton(button_frame, text="Editar", command=lambda: self.editar_entrenamiento(tree)).pack(side="left", padx=5)
+        ctk.CTkButton(button_frame, text="Eliminar", command=lambda: self.eliminar_entrenamiento(tree)).pack(side="left", padx=5)
 
-        ctk.CTkButton(ventana_seguimiento, text="Editar", command=lambda: self.editar_entrenamiento(selected_item, tabla, entrenamientos)).pack(pady=10)
-        ctk.CTkButton(ventana_seguimiento, text="Eliminar", command=lambda: self.eliminar_entrenamiento(selected_item, tabla, entrenamientos)).pack(pady=10)
-
-        # Filtro por tipo de ejercicio
-        ctk.CTkLabel(ventana_seguimiento, text="Filtrar por Tipo de Ejercicio").pack(pady=5)
-        tipo_ejercicio = ctk.CTkComboBox(ventana_seguimiento, values=["Todos", "Cardio", "Fuerza", "Flexibilidad"])
-        tipo_ejercicio.pack(pady=5)
-        tipo_ejercicio.set("Todos")
-
-        # Botón para aplicar el filtro
-        ctk.CTkButton(ventana_seguimiento, text="Aplicar Filtro", command=lambda: self.aplicar_filtro(tabla, tipo_ejercicio.get(), entrenamientos)).pack(pady=10)
-
-    def editar_entrenamiento(self, selected_item, tabla, entrenamientos):
+    def editar_entrenamiento(self, tree):
+        selected_item = tree.selection()
         if not selected_item:
-            return  # Si no hay selección, salir
+            messagebox.showwarning("Advertencia", "Por favor, seleccione un entrenamiento para editar.")
+            return
 
-        entrenamiento = entrenamientos[int(selected_item[0])]  # Obtiene el entrenamiento seleccionado
+        item = tree.item(selected_item)
+        id_entrenamiento = item['values'][0]
 
-        ventana_editar = ctk.CTkToplevel(self)
-        ventana_editar.title('Editar Entrenamiento')
-        ventana_editar.geometry('300x400')
+        # Aquí creas una nueva ventana para editar el entrenamiento
+        editar_window = ctk.CTkToplevel(self)
+        editar_window.title("Editar Entrenamiento")
+        editar_window.geometry('300x500')
+        editar_window.configure(fg_color='#0F1111')
 
-        # Campos para editar
-        ctk.CTkLabel(ventana_editar, text="Tipo de Ejercicio").pack(pady=5)
-        tipo_entry = ctk.CTkEntry(ventana_editar)
+        ctk.CTkLabel(editar_window, text="Tipo de Ejercicio").pack(pady=5)
+        tipo_entry = ctk.CTkEntry(editar_window)
         tipo_entry.pack(pady=5)
-        tipo_entry.insert(0, entrenamiento["tipo_ejercicio"])
+        tipo_entry.insert(0, item['values'][1])
 
-        ctk.CTkLabel(ventana_editar, text="Duración").pack(pady=5)
-        duracion_entry = ctk.CTkEntry(ventana_editar)
+        ctk.CTkLabel(editar_window, text="Grupos Musculares").pack(pady=5)
+        grupos_entry = ctk.CTkEntry(editar_window)
+        grupos_entry.pack(pady=5)
+        grupos_entry.insert(0, item['values'][2])
+
+        ctk.CTkLabel(editar_window, text="Duración").pack(pady=5)
+        duracion_entry = ctk.CTkEntry(editar_window)
         duracion_entry.pack(pady=5)
-        duracion_entry.insert(0, entrenamiento["duracion"])
+        duracion_entry.insert(0, item['values'][3])
 
-        ctk.CTkLabel(ventana_editar, text="Calorías").pack(pady=5)
-        calorias_entry = ctk.CTkEntry(ventana_editar)
-        calorias_entry.pack(pady=5)
-        calorias_entry.insert(0, entrenamiento["calorias"])
+        ctk.CTkButton(editar_window, text="Guardar Cambios", command=lambda: self.guardar_cambios_entrenamiento(
+            id_entrenamiento, 
+            tipo_entry.get(), 
+            grupos_entry.get(), 
+            duracion_entry.get(), 
+            editar_window, 
+            tree
+        )).pack(pady=20)
 
-        ctk.CTkLabel(ventana_editar, text="Comentarios").pack(pady=5)
-        comentarios_entry = ctk.CTkEntry(ventana_editar)
-        comentarios_entry.pack(pady=5)
-        comentarios_entry.insert(0, entrenamiento["comentarios"])
-
-        # Botón para guardar cambios
-        ctk.CTkButton(ventana_editar, text="Guardar Cambios", command=lambda: self.guardar_cambios(entrenamiento, tipo_entry.get(), duracion_entry.get(), calorias_entry.get(), comentarios_entry.get(), ventana_editar)).pack(pady=10)
-
-    def guardar_cambios(self, entrenamiento, tipo, duracion, calorias, comentarios, ventana):
-        # Aquí se debe actualizar la base de datos
-        ClienteDAO_GYM_1.actualizar_entrenamiento(entrenamiento["id"], tipo, duracion, calorias, comentarios)
-
-        # Cerrar la ventana
-        ventana.destroy()
-
-        # Actualizar la tabla de seguimientos
-        self.seguimiento_registrado_anteriormente()
-
-    def eliminar_entrenamiento(self, selected_item, tabla, entrenamientos):
-        if not selected_item:
-            return  # Si no hay selección, salir
-
-        entrenamiento = entrenamientos[int(selected_item[0])]  # Obtiene el entrenamiento seleccionado
-        ClienteDAO_GYM_1.eliminar_entrenamiento(entrenamiento["id"])
-
-        # Actualizar la tabla de seguimientos
-        self.seguimiento_registrado_anteriormente()
-
-    # Función para aplicar filtros
-    def aplicar_filtro(self, tabla, tipo, entrenamientos):
-        # Limpiar la tabla
-        for item in tabla.get_children():
-            tabla.delete(item)
-
-        # Filtrar los entrenamientos por tipo
-        if tipo == "Todos":
-            datos_filtrados = entrenamientos
+    def guardar_cambios_entrenamiento(self, id_entrenamiento, tipo, grupos, duracion, ventana, tree):
+        # Aquí actualizarías la base de datos
+        entrenamiento_actualizado = {
+            "id_registrar_entrenamiento_realizado": id_entrenamiento,
+            "tipo_de_ejercicio": tipo,
+            "grupo_muscular_trabajado": grupos,
+            "duracion_del_entrenamiento": duracion
+        }
+        resultado = Registrar_Entrenamiento_RealizadoDAO.actualizar_bd(entrenamiento_actualizado)
+        if resultado:
+            messagebox.showinfo("Éxito", "Entrenamiento actualizado correctamente")
+            ventana.destroy()
+            self.actualizar_treeview(tree)
         else:
-            datos_filtrados = [e for e in entrenamientos if e["tipo_ejercicio"] == tipo]
+            messagebox.showerror("Error", "No se pudo actualizar el entrenamiento")
 
-        # Insertar los datos filtrados en la tabla
-        for entrenamiento in datos_filtrados:
-            tabla.insert("", tk.END, values=(entrenamiento["fecha"], entrenamiento["tipo_ejercicio"],
-                                             entrenamiento["duracion"], entrenamiento["calorias"],
-                                             entrenamiento["comentarios"]))
+    def eliminar_entrenamiento(self, tree):
+        selected_item = tree.selection()
+        if not selected_item:
+            messagebox.showwarning("Advertencia", "Por favor, seleccione un entrenamiento para eliminar.")
+            return
 
+        if messagebox.askyesno("Confirmar", "¿Está seguro de que desea eliminar este entrenamiento?"):
+            item = tree.item(selected_item)
+            id_entrenamiento = item['values'][0]
+            
+            # Aquí eliminarías de la base de datos
+            resultado = Registrar_Entrenamiento_RealizadoDAO.eliminar_bd({"id_registrar_entrenamiento_realizado": id_entrenamiento})
+            if resultado:
+                tree.delete(selected_item)
+                messagebox.showinfo("Éxito", "Entrenamiento eliminado correctamente")
+            else:
+                messagebox.showerror("Error", "No se pudo eliminar el entrenamiento")
 
-# Ejecución del programa principal
+    def actualizar_treeview(self, tree):
+        # Limpiar el Treeview
+        for item in tree.get_children():
+            tree.delete(item)
+
+        # Volver a cargar los datos
+        entrenamientos = Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd(None)
+        for entrenamiento in entrenamientos:
+            tree.insert("", "end", values=(
+                entrenamiento["id_registrar_entrenamiento_realizado"],
+                entrenamiento["tipo_de_ejercicio"],
+                entrenamiento["grupo_muscular_trabajado"],
+                entrenamiento["duracion_del_entrenamiento"]
+            ))
+
+    def mostrar_link_registro(self):
+        registro_link = ctk.CTkLabel(self, text="Si no tienes cuenta, regístrate", text_color="blue", cursor="hand2")
+        registro_link.grid(row=3, column=0, padx=20, pady=5)
+        registro_link.bind("<Button-1>", self.abrir_ventana_registro)
+
+    def abrir_ventana_registro(self, event=None):
+        # Implementación de la ventana de registro (similar a tu código original)
+        pass
+
 if __name__ == "__main__":
-    app = App()
+    app = TrainSmart()
     app.mainloop()

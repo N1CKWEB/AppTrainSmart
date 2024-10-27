@@ -344,103 +344,125 @@ class TrainSmart(ctk.CTk):
             print(f'Información guardada es: {resultado}')
         else:
             messagebox.showerror('Error','No se pudo registrar el entrenamiento futuro') 
-        
-       
-    #   ÚLTIMA PARTE DE REALIZAR
+   
     def seguimiento_registrado_anteriormente(self, event=None):
-        
-        # Crear ventana para mostrar entrenamientos
-        ventana_seguimiento = ctk.CTkToplevel(self)
-        ventana_seguimiento.title('Entrenamientos Registrados')
-        ventana_seguimiento.geometry('300x500')
+        entrenamientos = Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd()
+        if entrenamientos:
+            ventana_seguimiento = ctk.CTkToplevel(self)
+            ventana_seguimiento.title('Entrenamientos Registrados')
+            ventana_seguimiento.geometry('300x500')
+            ventana_seguimiento.configure(fg_color='#0F1111')
 
-        # Hacer que las columnas y filas se ajusten
-        ventana_seguimiento.columnconfigure(0, weight=1)
-        ventana_seguimiento.rowconfigure([0, 1], weight=1)
-        
-        
+            tree = ttk.Treeview(ventana_seguimiento, columns=("ID", "Tipo", "Grupos Musculares", "Duración"), show="headings")
+            tree.heading("ID", text="ID")
+            tree.heading("Tipo", text="Tipo de Ejercicio")
+            tree.heading("Grupos Musculares", text="Grupos Musculares")
+            tree.heading("Duración", text="Duración (min)")
 
-        # Crear un marco para mostrar los entrenamientos
-        frame_lista_1 = ctk.CTkFrame(ventana_seguimiento)
-        frame_lista_1.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
-        
-        # tipo_de_ejercicio
-        self.tipo_de_ejercicio_caja_de_texto=ctk.CTkEntry(frame_lista_1)
-        self.tipo_de_ejercicio_caja_de_texto.grid(row=0, column=0, padx=10, pady=5,sticky='ew')
+            for entrenamiento in entrenamientos:
+                tree.insert("", "end", values=(
+                    entrenamiento["id_registrar_entrenamiento_realizado"],
+                    entrenamiento["tipo_de_ejercicio"],
+                    entrenamiento["grupo_muscular_trabajado"],
+                    entrenamiento["duracion_del_entrenamiento"]
+                ))
 
-        # grupo_muscular_trabajado
-        self.grupo_muscular_trabajado_caja_de_texto=ctk.CTkEntry(frame_lista_1)
-        self.grupo_muscular_trabajado_caja_de_texto.grid(row=1,column=0,padx=10,pady=5,sticky='ew')
-        
-        # duracion_del_entrenamiento
-        self.duracion_del_entrenamiento_caja_de_texto=ctk.CTkEntry(frame_lista_1)
-        self.duracion_del_entrenamiento_caja_de_texto.grid(row=2,column=0,padx=10,pady=5,sticky='ew')
-        
-        
-        # entrenamientos=Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd()
-        
-        # for entrenamiento in entrenamientos:
-        #          frame_lista_1.insert(parent='',index=tk.END,values=[entrenamiento['tipo_de_ejercicio'],entrenamiento['grupo_muscular_trabajado'],entrenamiento['duracion_del_entrenamiento']])
-                 
-                 
-        # Botón para editar entrenamiento
-        self.btn_editar = ctk.CTkButton(ventana_seguimiento, text="Editar", command=self.editar_entrenamiento)
-        self.btn_editar.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
+            tree.pack(padx=10, pady=10, expand=True, fill='both')
 
-        # Botón para eliminar entrenamiento
-        self.btn_eliminar = ctk.CTkButton(ventana_seguimiento, text="Eliminar", command=self.eliminar_entrenamiento)
-        self.btn_eliminar.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
+            button_frame = ctk.CTkFrame(ventana_seguimiento)
+            button_frame.pack(fill="x", padx=10, pady=10)
 
+            ctk.CTkButton(button_frame, text="Editar", command=lambda: self.editar_entrenamiento(tree)).pack(side="left", padx=5)
+            ctk.CTkButton(button_frame, text="Eliminar", command=lambda: self.eliminar_entrenamiento(tree)).pack(side="left", padx=5)
+        else:
+            messagebox.showinfo("Info", "No hay entrenamientos registrados.")
 
+    def editar_entrenamiento(self, tree):
+        selected_item = tree.selection()
+        if not selected_item:
+            messagebox.showwarning("Advertencia", "Por favor, seleccione un entrenamiento para editar.")
+            return
 
-    def editar_entrenamiento(self):
-        # Obtener el índice del entrenamiento seleccionado
-        seleccion = self.lista_entrenamientos.curselection()
-        if seleccion:
-            index = seleccion[0]
-            entrenamiento = self.entrenamientos[index]
+        item = tree.item(selected_item)
+        id_entrenamiento = item['values'][0]
 
-            # Crear ventana para editar el entrenamiento
-            ventana_editar = ctk.CTkToplevel(self)
-            ventana_editar.title('Editar Entrenamiento')
-            ventana_editar.geometry('300x500')
+        editar_window = ctk.CTkToplevel(self)
+        editar_window.title("Editar Entrenamiento")
+        editar_window.geometry('300x500')
+        editar_window.configure(fg_color='#0F1111')
 
-            # Campos para editar
-            tipo_var = tk.StringVar(value=entrenamiento['tipo'])
-            duracion_var = tk.StringVar(value=entrenamiento['Duracion'])
-            grupo_var = tk.StringVar(value=entrenamiento['grupo'])
+        ctk.CTkLabel(editar_window, text="Tipo de Ejercicio").pack(pady=5)
+        tipo_entry = ctk.CTkEntry(editar_window)
+        tipo_entry.pack(pady=5)
+        tipo_entry.insert(0, item['values'][1])
 
-            ctk.CTkLabel(ventana_editar, text="Tipo de Ejercicio").pack()
-            tipo_entry = ctk.CTkEntry(ventana_editar, textvariable=tipo_var)
-            tipo_entry.pack()
+        ctk.CTkLabel(editar_window, text="Grupos Musculares").pack(pady=5)
+        grupos_entry = ctk.CTkEntry(editar_window)
+        grupos_entry.pack(pady=5)
+        grupos_entry.insert(0, item['values'][2])
 
-            ctk.CTkLabel(ventana_editar, text="Duración").pack()
-            duracion_entry = ctk.CTkEntry(ventana_editar, textvariable=duracion_var)
-            duracion_entry.pack()
+        ctk.CTkLabel(editar_window, text="Duración").pack(pady=5)
+        duracion_entry = ctk.CTkEntry(editar_window)
+        duracion_entry.pack(pady=5)
+        duracion_entry.insert(0, item['values'][3])
 
-            ctk.CTkLabel(ventana_editar, text="Grupo Muscular").pack()
-            grupo_entry = ctk.CTkEntry(ventana_editar, textvariable=grupo_var)
-            grupo_entry.pack()
+        ctk.CTkButton(editar_window, text="Guardar Cambios", command=lambda: self.guardar_cambios_entrenamiento(
+            id_entrenamiento, 
+            tipo_entry.get(), 
+            grupos_entry.get(), 
+            duracion_entry.get(), 
+            editar_window, 
+            tree
+        )).pack(pady=20)
 
-            # Botón para guardar cambios
-            btn_guardar = ctk.CTkButton(ventana_editar, text="Guardar", command=lambda: self.guardar_cambios(index, tipo_var.get(), duracion_var.get(), grupo_var.get(), ventana_editar))
-            btn_guardar.pack(pady=10)
+    def guardar_cambios_entrenamiento(self, id_entrenamiento, tipo, grupos, duracion, ventana, tree):
+        entrenamiento_actualizado = Registrar_Entrenamiento(
+            id_registrar_entrenamiento_realizado=id_entrenamiento,
+            tipo_de_ejercicio=tipo,
+            grupo_muscular_trabajado=grupos,
+            duracion_del_entrenamiento=duracion
+        )
+        resultado = Registrar_Entrenamiento_RealizadoDAO.actualizar_bd(entrenamiento_actualizado)
+        if resultado:
+            messagebox.showinfo("Éxito", "Entrenamiento actualizado correctamente")
+            ventana.destroy()
+            self.actualizar_treeview(tree)
+        else:
+            messagebox.showerror("Error", "No se pudo actualizar el entrenamiento")
 
-    def guardar_cambios(self, index, tipo, duracion, grupo, ventana):
-        # Actualizar el entrenamiento en la lista
-        self.entrenamientos[index] = {"tipo": tipo, "duracion": duracion, "grupo": grupo}
-        self.lista_entrenamientos.delete(index)
-        self.lista_entrenamientos.insert(index, f"{tipo} - {duracion} - {grupo}")
-        ventana.destroy()  # Cerrar ventana de edición
+    def eliminar_entrenamiento(self, tree):
+        selected_item = tree.selection()
+        if not selected_item:
+            messagebox.showwarning("Advertencia", "Por favor, seleccione un entrenamiento para eliminar.")
+            return
 
-    def eliminar_entrenamiento(self):
-        # Obtener el índice del entrenamiento seleccionado
-        seleccion = self.lista_entrenamientos.curselection()
-        if seleccion:
-            index = seleccion[0]
-            self.entrenamientos.pop(index)  # Eliminar de la lista
-            self.lista_entrenamientos.delete(index)  # Eliminar de la lista visual
-        
+        if messagebox.askyesno("Confirmar", "¿Está seguro de que desea eliminar este entrenamiento?"):
+            item = tree.item(selected_item)
+            id_entrenamiento = item['values'][0]
+            
+            entrenamiento_a_eliminar = Registrar_Entrenamiento(
+                id_registrar_entrenamiento_realizado=id_entrenamiento
+            )
+            resultado = Registrar_Entrenamiento_RealizadoDAO.eliminar_bd(entrenamiento_a_eliminar)
+            if resultado:
+                tree.delete(selected_item)
+                messagebox.showinfo("Éxito", "Entrenamiento eliminado correctamente")
+            else:
+                messagebox.showerror("Error", "No se pudo eliminar el entrenamiento")
+
+    def actualizar_treeview(self, tree):
+        for item in tree.get_children():
+            tree.delete(item)
+
+        entrenamientos = Registrar_Entrenamiento_RealizadoDAO.seleccionar_bd()
+        for entrenamiento in entrenamientos:
+            tree.insert("", "end", values=(
+                entrenamiento["id_registrar_entrenamiento_realizado"],
+                entrenamiento["tipo_de_ejercicio"],
+                entrenamiento["grupo_muscular_trabajado"],
+                entrenamiento["duracion_del_entrenamiento"]
+            ))
+    
     def mostrar_link_registro(self):
         
         # Crear un link de texto para registrarse
