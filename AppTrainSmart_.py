@@ -140,6 +140,7 @@ class TrainSmart(ctk.CTk):
         
     
     def mostrar_formulario(self):    
+        
         # Frame para el formulario
         self.frame_form = ctk.CTkFrame(self)
         self.frame_form.grid(row=1, column=0, padx=20, pady=(10, 10))
@@ -160,6 +161,7 @@ class TrainSmart(ctk.CTk):
      
              
     def Segunda_Ventana(self, event=None):
+        
         # Ventana para registrar el entrenamiento
         ventana_registro_de_entrenamiento = ctk.CTkToplevel(self)
         ventana_registro_de_entrenamiento.title('Registrar entrenamiento')
@@ -167,6 +169,7 @@ class TrainSmart(ctk.CTk):
         ventana_registro_de_entrenamiento.resizable(0, 0)
 #       
         ventana_registro_de_entrenamiento.columnconfigure(0, weight=1)
+        
         
         # BOTÓN/IMAGEN 1 - Inicia Segunda_Ventana
         # Cargar la imagen con PIL y luego convertirla a CTkImage
@@ -178,6 +181,7 @@ class TrainSmart(ctk.CTk):
         boton_registrar_entrenamiento.grid(row=0, column=0, padx=20, pady=(5, 10), sticky="n")  # Aumenta el espaciado y centra
         boton_registrar_entrenamiento.bind("<Button-1>", self.registrar_entrenamiento)
 
+
         # BOTÓN/IMAGEN 2 - Inicia Segunda_Ventana_2
         imagen_original_2 = Image.open('C:/Users/LENOVO/OneDrive/Documentos/AppTrainSmart_GYM/Imagenes/2.png')
         imagen_redimensionada_2 = imagen_original_2.resize((410, 200))  # Redimensionar a 300x200
@@ -187,6 +191,7 @@ class TrainSmart(ctk.CTk):
         boton_registrar_entrenamiento_futuro.grid(row=1, column=0, padx=20, pady=(5, 10), sticky="n")  # Aumenta el espaciado
         boton_registrar_entrenamiento_futuro.bind("<Button-1>", self.registrar_entrenamiento_futuro)
 
+
         # BOTÓN/IMAGEN 3 - Inicia Segunda_Ventana_3
         imagen_original_3 = Image.open('C:/Users/LENOVO/OneDrive/Documentos/AppTrainSmart_GYM/Imagenes/3.png')
         imagen_redimensionada_3 = imagen_original_3.resize((410, 200))  # Redimensionar a 300x200
@@ -195,6 +200,7 @@ class TrainSmart(ctk.CTk):
         boton_seguimiento_registrado_anteriormente.image = imagen_tk_3
         boton_seguimiento_registrado_anteriormente.grid(row=2, column=0, padx=20, pady=(5, 10), sticky="n")  # Ajustar espaciado
         boton_seguimiento_registrado_anteriormente.bind("<Button-1>", self.seguimiento_registrado_anteriormente)
+        
         
     def mostrar_botones(self):
         
@@ -245,6 +251,7 @@ class TrainSmart(ctk.CTk):
         values_1 = ["Cardio", "Fuerza", "Flexibilidad"]
         self.scrollable_checkbox_frame = ScrollBar_1(ventana_del_primer_boton, title="Tipo de Ejercicio", values=values_1)
         self.scrollable_checkbox_frame.grid(row=0, column=0, padx=3, pady=5, sticky="nsew")
+
 
         values_2 = ['Pecho', 'Espalda', 'Piernas', 'Hombros', 'Bíceps', 'Tríceps']
         self.scrollable_checkbox_frame_2 = ScrollBar_2(ventana_del_primer_boton, title='Grupo muscular trabajado', values=values_2)
@@ -378,6 +385,7 @@ class TrainSmart(ctk.CTk):
             messagebox.showinfo("Info", "No hay entrenamientos registrados.")
 
     def editar_entrenamiento(self, tree):
+        
         selected_item = tree.selection()
         if not selected_item:
             messagebox.showwarning("Advertencia", "Por favor, seleccione un entrenamiento para editar.")
@@ -416,6 +424,7 @@ class TrainSmart(ctk.CTk):
         )).pack(pady=20)
 
     def guardar_cambios_entrenamiento(self, id_entrenamiento, tipo, grupos, duracion, ventana, tree):
+      
         entrenamiento_actualizado = Registrar_Entrenamiento(
             id_registrar_entrenamiento_realizado=id_entrenamiento,
             tipo_de_ejercicio=tipo,
@@ -431,6 +440,7 @@ class TrainSmart(ctk.CTk):
             messagebox.showerror("Error", "No se pudo actualizar el entrenamiento")
 
     def eliminar_entrenamiento(self, tree):
+    
         selected_item = tree.selection()
         if not selected_item:
             messagebox.showwarning("Advertencia", "Por favor, seleccione un entrenamiento para eliminar.")
